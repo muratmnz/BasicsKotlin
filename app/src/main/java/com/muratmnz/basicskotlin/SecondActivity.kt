@@ -15,6 +15,13 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
+
+        val actionBar = supportActionBar
+
+        actionBar!!.setDisplayHomeAsUpEnabled(true)
+        actionBar!!.setDisplayHomeAsUpEnabled(true)
+
+
         //initialize btnNext with view
         btnNextPage = findViewById(R.id.btnNextPage)
 
@@ -22,8 +29,14 @@ class SecondActivity : AppCompatActivity() {
         btnNextPage.setOnClickListener {
             val intentSecond = Intent(this, ThirdActivity::class.java)
             startActivity(intentSecond)
-            finish()
         }
 
     }
+
+    //Back button
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
 }

@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
         btnNext.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)
-            finish()
         }
 
     }
