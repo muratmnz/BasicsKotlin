@@ -5,31 +5,32 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.muratmnz.basicskotlin.databinding.ActivitySecondBinding
 
 class SecondActivity : AppCompatActivity() {
 
-    lateinit var btnNextPage: Button
+    lateinit var binding: ActivitySecondBinding
 
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_second)
+        //create binding
+        binding = ActivitySecondBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
-
-        val actionBar = supportActionBar
-
-        actionBar!!.setDisplayHomeAsUpEnabled(true)
-        actionBar!!.setDisplayHomeAsUpEnabled(true)
-
-
-        //initialize btnNext with view
-        btnNextPage = findViewById(R.id.btnNextPage)
-
-        //navigate between activities
-        btnNextPage.setOnClickListener {
+        //navigate  between activities with View binding
+        binding.btnNextPage.setOnClickListener {
             val intentSecond = Intent(this, ThirdActivity::class.java)
             startActivity(intentSecond)
         }
+
+        binding.btnPrevPage.setOnClickListener {
+            val intentPrev = Intent(this, MainActivity::class.java)
+            startActivity(intentPrev)
+        }
+
+        val actionBar = supportActionBar
+        actionBar!!.setDisplayHomeAsUpEnabled(true)
 
     }
 
