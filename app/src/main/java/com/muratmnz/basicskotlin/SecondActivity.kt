@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import com.muratmnz.basicskotlin.databinding.ActivitySecondBinding
 
 class SecondActivity : AppCompatActivity() {
@@ -17,6 +18,9 @@ class SecondActivity : AppCompatActivity() {
         binding = ActivitySecondBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        //get data from another activity with Intent
+        var item: String = intent.getStringExtra("data").toString()
+        binding.listItem.text = item
 
         //navigate  between activities with View binding
         binding.btnNextPage.setOnClickListener {
