@@ -1,11 +1,12 @@
 package com.muratmnz.basicskotlin
 
-import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
+import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.muratmnz.basicskotlin.databinding.ActivitySecondBinding
 
 class SecondActivity : AppCompatActivity() {
@@ -36,6 +37,21 @@ class SecondActivity : AppCompatActivity() {
         val actionBar = supportActionBar
         actionBar!!.setDisplayHomeAsUpEnabled(true)
 
+        //add text item inside Linearlayout with view binding.
+        binding.btnAdd.setOnClickListener {
+            val text = binding.editTextTextPersonName.text
+            val itemText = TextView(this)
+            itemText.setText(text)
+            itemText.setLayoutParams(
+                ViewGroup.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+            )
+
+            binding.linearLayout.addView(itemText)
+
+        }
     }
 
     //Back button
