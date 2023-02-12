@@ -68,7 +68,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="Enter a word."
+        android:hint="Enter a word..."
         app:layout_constraintBottom_toTopOf="@+id/btn_Add"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
