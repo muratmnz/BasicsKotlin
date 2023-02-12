@@ -23,4 +23,5 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="78dp"
         app:srcCompat="@drawable/welcome_icon" />
+
 </RelativeLayout>

@@ -56,8 +56,6 @@ class SecondActivity : AppCompatActivity() {
 
     }
 
-
-
     //Back button
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
