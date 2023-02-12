@@ -49,11 +49,9 @@ class SecondActivity : AppCompatActivity() {
                     ViewGroup.LayoutParams.WRAP_CONTENT
                 )
             )
-
             binding.linearLayout.addView(itemText)
 
         }
-
     }
 
     //Back button
@@ -61,5 +59,4 @@ class SecondActivity : AppCompatActivity() {
         onBackPressed()
         return true
     }
-
 }
