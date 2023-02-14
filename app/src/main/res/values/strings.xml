@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">BasicsKotlin</string>
-    <string name="open">Open</string>
-    <string name="close">Close</string>
+    <string name="open" translatable="false">Open</string>
+    <string name="close" translatable="false">Close</string>
+    <string name="text">Hello World</string>
+
 </resources>
